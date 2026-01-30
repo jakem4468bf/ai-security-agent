@@ -1,4 +1,4 @@
-# Applied Network Security - AI Security Agents
+# Applied Network Security - AI Security Agent
 
 ## Overview 
 This repository contains work for both project 1 (Building an Agent with Kagent and Ollama) and project 2 (Securing Agent Communications with Agentgateway)
