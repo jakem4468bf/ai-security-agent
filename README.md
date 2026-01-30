@@ -3,9 +3,9 @@
 ## Overview 
 This repository contains work for both project 1 (Building an Agent with Kagent and Ollama) and project 2 (Securing Agent Communications with Agentgateway)
 ### Project 1: 
-* Deployed a Kubernetes troubleshooting agent using Kagent with Ollama (llama3.2:1b) as the local LLM in a Kind cluster.
+* Deploy a Kubernetes troubleshooting agent using Kagent with Ollama (llama3.2:1b) as the local LLM in a Kind cluster.
 ### Project 2
-* Deployed Agentgateway to secure and observe communications between AI agents and MCP servers with policy-based access control.
+* Deploy Agentgateway to secure and observe communications between AI agents and MCP servers with policy-based access control.
 ## Setup Instructions
 
 ### Project 1: Building an Agent with Kagent and Ollama
