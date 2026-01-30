@@ -16,10 +16,10 @@ Install docker engine (docker desktop on windows), Kubectl and kind.
 
 ### Project 1: Building an Agent with Kagent and Ollama
 
-#### Step 1: Create a Kind Cluster
+#### Step 1: Basic Start up: Create a Kind Cluster
 Create a Kind cluster with port mappings for HTTP and HTTPS traffic. Verify the cluster is running.
 
-#### Step 2: Install Ollama in the Cluster
+#### Step 2: Basic Start up: Install Ollama in the Cluster
 Create the `ollama` namespace and deploy Ollama. Wait for the pod to be ready, then pull the `llama3.2:1b` model.
 
 #### Step 3: Install Kagent
