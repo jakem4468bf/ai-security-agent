@@ -1,5 +1,4 @@
-# Applied Network Security 2025 - Final Assignment AI Security Agents
-## Jake Martins StudentID: 991734093. Submission Date: 12/09/25
+# Applied Network Security - AI Security Agents
 
 ## Overview 
 This repository contains work for both project 1 (Building an Agent with Kagent and Ollama) and project 2 (Securing Agent Communications with Agentgateway)
