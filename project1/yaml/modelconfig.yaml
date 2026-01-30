@@ -1,0 +1,25 @@
+apiVersion: kagent.dev/v1alpha2
+kind: ModelConfig
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"kagent.dev/v1alpha1","kind":"ModelConfig","metadata":{"annotations":{},"name":"ollama-model-config","namespace":"kagent"},"spec":{"model":"llama3.2:1b","ollama":{"host":"http://ollama.ollama.svc.cluster.local:11434"},"provider":"Ollama"}}
+  creationTimestamp: "2025-12-03T01:22:07Z"
+  generation: 1
+  name: ollama-model-config
+  namespace: kagent
+  resourceVersion: "5021"
+  uid: e14efaaa-8f3f-4e62-b71f-737526e676d1
+spec:
+  model: llama3.2:1b
+  ollama:
+    host: http://ollama.ollama.svc.cluster.local:11434
+  provider: Ollama
+status:
+  conditions:
+  - lastTransitionTime: "2025-12-03T01:22:07Z"
+    message: ""
+    reason: ModelConfigReconciled
+    status: "True"
+    type: Accepted
+  observedGeneration: 1

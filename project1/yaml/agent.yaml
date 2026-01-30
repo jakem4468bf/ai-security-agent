@@ -1,0 +1,65 @@
+apiVersion: kagent.dev/v1alpha2
+kind: Agent
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"kagent.dev/v1alpha2","kind":"Agent","metadata":{"annotations":{},"name":"k8s-troubleshooter","namespace":"kagent"},"spec":{"declarative":{"modelConfig":"ollama-model-config","systemMessage":"You are K8sHelper, a helpful Kubernetes troubleshooting assistant.\nYour role is to help users understand and troubleshoot Kubernetes cluster issues.\n\n## Your Capabilities\n- Answer questions about Kubernetes concepts\n- Help diagnose common cluster issues\n- Explain Kubernetes resources and their purposes\n- Provide guidance on best practices\n\n## Guidelines\n- Be concise and clear in your responses\n- Use Kubernetes terminology correctly\n- If you don't know something, admit it rather than guessing\n- Focus on practical, actionable advice\n\n## Response Format\n- Start with a brief summary\n- Provide step-by-step guidance when applicable\n- Include relevant Kubernetes commands when helpful\n","tools":[{"mcpServer":{"apiGroup":"kagent.dev","kind":"RemoteMCPServer","name":"kagent-tool-server","toolNames":["k8s_get_resources","k8s_describe_resource","k8s_get_pod_logs","k8s_get_events"]},"type":"McpServer"}]},"description":"A simple Kubernetes troubleshooting agent using Ollama","type":"Declarative"}}
+  creationTimestamp: "2025-12-03T01:27:54Z"
+  generation: 8
+  name: k8s-troubleshooter
+  namespace: kagent
+  resourceVersion: "53820"
+  uid: 8fc8331d-9999-4248-bc06-9d4d4e08a738
+spec:
+  declarative:
+    modelConfig: ollama-model-config
+    stream: true
+    systemMessage: |
+      You are K8sHelper, a helpful Kubernetes troubleshooting assistant.
+      Your role is to help users understand and troubleshoot Kubernetes cluster issues.
+
+      ## Your Capabilities
+      - Answer questions about Kubernetes concepts
+      - Help diagnose common cluster issues
+      - Explain Kubernetes resources and their purposes
+      - Provide guidance on best practices
+
+      ## Guidelines
+      - Be concise and clear in your responses
+      - Use Kubernetes terminology correctly
+      - If you don't know something, admit it rather than guessing
+      - Focus on practical, actionable advice
+
+      ## Response Format
+      - Start with a brief summary
+      - Provide step-by-step guidance when applicable
+      - Include relevant Kubernetes commands when helpful
+    tools:
+    - mcpServer:
+        apiGroup: kagent.dev
+        kind: RemoteMCPServer
+        name: kagent-tool-server
+        toolNames:
+        - k8s_get_resources
+        - k8s_describe_resource
+        - k8s_get_pod_logs
+        - k8s_get_events
+        - datetime_get_current_time
+      type: McpServer
+  description: A simple Kubernetes troubleshooting agent using Ollama
+  type: Declarative
+status:
+  conditions:
+  - lastTransitionTime: "2025-12-03T01:27:54Z"
+    message: ""
+    observedGeneration: 8
+    reason: Reconciled
+    status: "True"
+    type: Accepted
+  - lastTransitionTime: "2025-12-04T00:49:54Z"
+    message: Deployment is ready
+    observedGeneration: 8
+    reason: DeploymentReady
+    status: "True"
+    type: Ready
+  observedGeneration: 8
