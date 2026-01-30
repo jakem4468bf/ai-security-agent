@@ -56,27 +56,46 @@ Create a RemoteMCPServer resource to expose the gateway to Kagent agents.
 Apply the `updated-agent.yaml` to configure the agent to use tools through the gateway.
 
 ## Software versions:
+
 Kubectl: 
 * Client Version: v1.34.0
 * Kustomize Version: v5.7.1
 * Server Version: v1.34.0
+
 Docker:
+
 * Docker version 29.0.1, build eedd969
+
 Kubernetes:
 * v0.7.5
+
 Kagent:
 * v0.7.5
+
 ## Project Structure
+
 AI security agent/
+
 ├── project1/
+
 │   ├── yaml/
+
 │   │   ├── modelconfig.yaml
+
 │   │   └── agent.yaml
+
 ├── project2/
+
 │   ├── yaml/
+
 │   │   ├── gateway.yaml
+
 │   │   ├── backend.yaml
+
 │   │   ├── httproute.yaml
+
 │   │   ├── trafficpolicy.yaml
+
 │   │   └── updated-agent.yaml
+
 └── README.md
