@@ -10,6 +10,7 @@ This repository contains work for both project 1 (Building an Agent with Kagent 
 I recommend setting this project up in a linux envoirnment as there is several things here that don't work directly with windows. However it is still possible to do this within windows, I have added notes to instructions for windows.
 
 git clone https://github.com/jakem4468bf/ai-security-agent.git
+
 Install docker engine (docker desktop on windows), Kubectl and kind.
 
 
