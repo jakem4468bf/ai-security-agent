@@ -7,7 +7,7 @@ This repository contains work for both project 1 (Building an Agent with Kagent 
 ### Project 2
 * Deploy Agentgateway to secure and observe communications between AI agents and MCP servers with policy-based access control.
 ## Setup Instructions
-
+I recommend setting this project up in a linux envoirnment as there is several things here that don't work directly with windows. However it is still possible to do this within windows, I have added notes to instructions for windows.
 ### Project 1: Building an Agent with Kagent and Ollama
 
 #### Step 1: Create a Kind Cluster
@@ -18,6 +18,7 @@ Create the `ollama` namespace and deploy Ollama. Wait for the pod to be ready, t
 
 #### Step 3: Install Kagent
 Install the Kagent CLI and deploy Kagent to the cluster in the `kagent` namespace. Wait for the controller to be ready.
+Note: Kagent CLI will not download directly without chocolatey on windows. Install it from Chocolatey.org. 
 
 #### Step 4: Create ModelConfig for Ollama
 Apply the `modelconfig.yaml` to configure Kagent to use Ollama as the LLM provider.
@@ -32,6 +33,7 @@ Port-forward to the Kagent UI or use the CLI to interact with the agent.
 
 #### Step 1: Install Kgateway with Agentgateway Data Plane
 Install Kgateway using Helm with the Agentgateway data plane. Wait for all components to be ready.
+Note: Same as kagent this will need chocolately for windwows. Chocolately.org
 
 #### Step 2: Deploy a Sample MCP Server
 Create the `mcp` namespace and deploy a sample MCP server (time server).
