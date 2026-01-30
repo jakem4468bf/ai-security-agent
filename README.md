@@ -8,6 +8,11 @@ This repository contains work for both project 1 (Building an Agent with Kagent 
 * Deploy Agentgateway to secure and observe communications between AI agents and MCP servers with policy-based access control.
 ## Setup Instructions
 I recommend setting this project up in a linux envoirnment as there is several things here that don't work directly with windows. However it is still possible to do this within windows, I have added notes to instructions for windows.
+
+git clone https://github.com/jakem4468bf/ai-security-agent.git
+Install docker engine (docker desktop on windows), Kubectl and kind.
+
+
 ### Project 1: Building an Agent with Kagent and Ollama
 
 #### Step 1: Create a Kind Cluster
@@ -28,7 +33,7 @@ Apply the `modelconfig.yaml` to configure Kagent to use Ollama as the LLM provid
 Apply the `agent.yaml` to create the Kubernetes troubleshooting agent with MCP tools.
 
 #### Step 6: Access the Agent
-Port-forward to the Kagent UI or use the CLI to interact with the agent.
+Test and interact with agent via CLI (kagent agent chat k8s-troubleshooter -n kagent) or Browser at http://localhost:8080
 
 ### Project 2: Securing Agent Communications with Agentgateway
 
@@ -38,7 +43,7 @@ Install Kgateway using Helm with the Agentgateway data plane. Wait for all compo
 Note: Same as kagent this will need chocolately for windwows. Chocolately.org
 
 #### Step 2: Deploy a Sample MCP Server
-Create the `mcp` namespace and deploy a sample MCP server (time server).
+Create the `mcp` namespace and deploy a sample MCP server (time server) `mcp.sh`
 
 #### Step 3: Deploy Agentgateway Gateway
 Apply the `gateway.yaml` to create the Gateway resource.
