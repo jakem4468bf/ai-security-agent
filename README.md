@@ -18,6 +18,7 @@ Create the `ollama` namespace and deploy Ollama. Wait for the pod to be ready, t
 
 #### Step 3: Install Kagent
 Install the Kagent CLI and deploy Kagent to the cluster in the `kagent` namespace. Wait for the controller to be ready.
+
 Note: Kagent CLI will not download directly without chocolatey on windows. Install it from Chocolatey.org. 
 
 #### Step 4: Create ModelConfig for Ollama
@@ -33,6 +34,7 @@ Port-forward to the Kagent UI or use the CLI to interact with the agent.
 
 #### Step 1: Install Kgateway with Agentgateway Data Plane
 Install Kgateway using Helm with the Agentgateway data plane. Wait for all components to be ready.
+
 Note: Same as kagent this will need chocolately for windwows. Chocolately.org
 
 #### Step 2: Deploy a Sample MCP Server
