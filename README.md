@@ -56,7 +56,7 @@ Apply the `backend.yaml` to configure the MCP server backend. Apply the `httprou
 Apply the `trafficpolicy.yaml` to restrict tool access using RBAC policies.
 
 #### Step 6: Register Agentgateway with Kagent
-Create a RemoteMCPServer resource to expose the gateway to Kagent agents.
+Register RemoteMCPServer resource with `RegAgentGateway.sh` to expose the gateway to Kagent agents.
 
 #### Step 7: Update Agent to Use Agentgateway
 Apply the `updated-agent.yaml` to configure the agent to use tools through the gateway.
